@@ -13,7 +13,7 @@ Note: It's assumed that the application is [framework-dependent](https://learn.m
 docker run -p 8123:80 --rm -v ${PWD}:/app boeegh/dotnet-run-7
 
 # run the .net app in the current directory
-docker run --rm -v ${PWD}:/app boeegh/dotnet-run-N
+docker run --rm -v ${PWD}:/app boeegh/dotnet-run-7
 
 # manually specify the dll to run (the default .net image behaviour)
 docker run -v ${PWD}:/app boeegh/dotnet-run-7 dotnet ./MyApp.dll
