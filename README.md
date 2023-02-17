@@ -15,7 +15,7 @@ docker run -p 8123:80 --rm -v ${PWD}:/app boeegh/dotnet-run-N
 # run the .net app in the current directory
 docker run --rm -v ${PWD}:/app boeegh/dotnet-run-N
 
-# manually specify the dll to run (the default .net image behaviour)
+# manually specify the dll to run (the default .NET image behaviour)
 docker run -v ${PWD}:/app boeegh/dotnet-run-N dotnet ./MyApp.dll
 ```
 
