@@ -1,5 +1,5 @@
-# dotnet-run-N
-Lightweight (Alpine) based .NET Framework N runtime container with a few tweaks:
+# dotnet-run-7
+Lightweight (Alpine) based .NET Framework 7 runtime container with a few tweaks:
 
 * Uses [dumb-init](https://github.com/Yelp/dumb-init) to ensure proper signalling
 * Automatically attempts to find and start proper dll
@@ -9,14 +9,14 @@ Note: It's assumed that the application is [framework-dependent](https://learn.m
 
 ## Usage
 ```powershell
-# run the .net v6 web app in the current directory (browse using http://localhost:8123)
-docker run -p 8123:80 --rm -v ${PWD}:/app boeegh/dotnet-run-N
+# run the .net v7 web app in the current directory (browse using http://localhost:8123)
+docker run -p 8123:80 --rm -v ${PWD}:/app boeegh/dotnet-run-7
 
 # run the .net app in the current directory
 docker run --rm -v ${PWD}:/app boeegh/dotnet-run-N
 
 # manually specify the dll to run (the default .net image behaviour)
-docker run -v ${PWD}:/app boeegh/dotnet-run-N dotnet ./MyApp.dll
+docker run -v ${PWD}:/app boeegh/dotnet-run-7 dotnet ./MyApp.dll
 ```
 
 _Please note this is an experimental image that may... explode at any time. Use with caution. Or not at all._
