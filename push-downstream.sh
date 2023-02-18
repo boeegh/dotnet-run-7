@@ -33,8 +33,8 @@ do
   # git add -A || echo "Nothing to add in $PWD?"
   git commit -m $commit_message || echo "Nothing to commit in $PWD?"
   if [ -n "$commit_version" ]; then
-    git tag "v0.$minor_version.$commit_version"
-    git push --tags
+    git tag "v0.$minor_version.$commit_version" || echo "Unable to add tag."
+    git push --tags || echo "Unable to push tags."
   fi
   git push
 #  git push --force
