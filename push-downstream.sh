@@ -30,7 +30,7 @@ do
   # git rebase upstream/main || (echo "Entering manual mode. When you're ready to commit, type: exit" && bash)
   git merge upstream/main || (echo "Entering manual mode in $PWD. When you're ready to commit, type: exit" && bash && echo "Returned from manual mode. Proceeding with commit and push.")
 
-  git add -A || echo "Nothing to add in $PWD?"
+  # git add -A || echo "Nothing to add in $PWD?"
   git commit -m $commit_message || echo "Nothing to commit in $PWD?"
   if [ -n "$commit_version" ]; then
     git tag "v0.$minor_version.$commit_version"
